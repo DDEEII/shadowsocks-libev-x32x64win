@@ -25,6 +25,7 @@ set -e
 # Build steps
 
 dk_prepare() {
+    cat /etc/apt/sources.list
     apt-get update -y
     apt-get install --no-install-recommends -y \
       mingw-w64 aria2 git make automake autoconf libtool ca-certificates
