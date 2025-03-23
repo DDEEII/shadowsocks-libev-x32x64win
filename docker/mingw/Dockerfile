@@ -26,6 +26,7 @@ ARG REV=master
 ADD docker/mingw/apt.sh /
 
 RUN \
+  cat /etc/apt/sources.list && \
   /bin/bash -c "source /apt.sh && dk_prepare" && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /build
