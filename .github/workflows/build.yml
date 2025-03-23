@@ -16,8 +16,7 @@ jobs:
       
     - name: setup deb822 repos
       run: |
-        if [[ $ImageOS == "ubuntu24" ]]; then
-          cat <<EOF > deb822sources
+        cat <<EOF > deb822sources
         Types: deb
         URIs: http://archive.ubuntu.com/ubuntu/
         Suites: noble
