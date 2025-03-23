@@ -14,11 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: check apt sources
-      run: |
-        cat config/crosscomp-sources.list
-        cat /etc/apt/sources.list
-
     - name: setup deb822 repos
       run: |
         if [[ $ImageOS == "ubuntu24" ]]; then
