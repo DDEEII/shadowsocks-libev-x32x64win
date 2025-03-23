@@ -48,10 +48,8 @@ jobs:
         Architectures: arm64
         EOF
   
-          sudo mv deb822sources /etc/apt/sources.list.d/ubuntu.sources
-        else
-          sudo mv config/crosscomp-sources.list /etc/apt/sources.list
-        fi
+        sudo mv deb822sources /etc/apt/sources.list.d/ubuntu.sources
+        
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
