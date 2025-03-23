@@ -32,7 +32,7 @@ RUN \
   deb http://archive.debian.org/debian stretch/updates main;\
   deb http://archive.debian.org/debian stretch main;\
   deb http://archive.debian.org/debian-security stretch/updates main;\
-  EOF;\
+  EOF && \
   sudo mv debsources /etc/apt/sources.list && \
   cat /etc/apt/sources.list && \
   /bin/bash -c "source /apt.sh && dk_prepare" && \
