@@ -50,7 +50,11 @@ jobs:
   
         sudo mv deb822sources /etc/apt/sources.list.d/ubuntu.sources
         
-    
+    - name: check apt sources
+      run: |
+        sudo ls -l /etc/apt/sources.list.d
+        sudo cat /etc/apt/sources.list.d/ubuntu.sources
+        
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
