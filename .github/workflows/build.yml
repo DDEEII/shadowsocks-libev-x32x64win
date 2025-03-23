@@ -27,7 +27,7 @@ jobs:
         make REPO=$REPO REV=$REV PLUGIN=true
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: shadowsocks-libev-windows
         path: docker/mingw/ss-libev-win-dist.tar.gz
