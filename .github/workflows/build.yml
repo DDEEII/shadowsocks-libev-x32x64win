@@ -13,47 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
-    - name: setup deb822 repos
-      run: |
-        cat <<EOF > deb822sources
-        Types: deb
-        URIs: http://archive.ubuntu.com/ubuntu/
-        Suites: noble
-        Components: main restricted universe
-        Architectures: amd64
-            
-        Types: deb
-        URIs: http://security.ubuntu.com/ubuntu/
-        Suites: noble-security
-        Components: main restricted universe
-        Architectures: amd64
-            
-        Types: deb
-        URIs: http://archive.ubuntu.com/ubuntu/
-        Suites: noble-updates
-        Components: main restricted universe
-        Architectures: amd64
-           
-        Types: deb
-        URIs: http://azure.ports.ubuntu.com/ubuntu-ports/
-        Suites: noble
-        Components: main restricted multiverse universe
-        Architectures: arm64
-         
-        Types: deb
-        URIs: http://azure.ports.ubuntu.com/ubuntu-ports/
-        Suites: noble-updates
-        Components: main restricted multiverse universe
-        Architectures: arm64
-        EOF
-  
-        sudo mv deb822sources /etc/apt/sources.list.d/ubuntu.sources
-        
-    - name: check apt sources
-      run: |
-        sudo ls -l /etc/apt/sources.list.d
-        sudo cat /etc/apt/sources.list.d/ubuntu.sources
         
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -65,7 +24,7 @@ jobs:
         REV: ${{ github.sha }}
       run: |
         # 根据项目README，在Unix-like系统使用make
-        make REPO=$REPO REV=$REV PLUGIN=true
+        make
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
