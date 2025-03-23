@@ -24,7 +24,7 @@ jobs:
         REV: ${{ github.sha }}
       run: |
         # 根据项目README，在Unix-like系统使用make
-        make
+        make REPO=$REPO REV=$REV PLUGIN=true
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
