@@ -50,7 +50,7 @@ MBEDTLS_URL=https://tls.mbed.org/download/mbedtls-${MBEDTLS_VER}-apache.tgz
 ## Sodium
 SODIUM_VER=1.0.18
 SODIUM_SRC=libsodium-stable
-SODIUM_URL=https://download.libsodium.org/libsodium/releases/libsodium-${SODIUM_VER}-stable.tar.gz
+SODIUM_URL=http://download.libsodium.org/libsodium/releases/libsodium-${SODIUM_VER}-stable.tar.gz
 
 ## PCRE
 PCRE_VER=8.44
