@@ -26,16 +26,8 @@ ARG REV=master
 ADD docker/mingw/apt.sh /
 
 RUN \
-  sudo echo 'deb http://archive.debian.org/debian stretch main\n\
-  \n\
-  deb http://archive.debian.org/debian-security stretch/updates main\n\
-  \n\
-  deb http://archive.debian.org/debian stretch/updates main\n\
-  \n\
-  deb http://archive.debian.org/debian stretch main\n\
-  \n\
-  deb http://archive.debian.org/debian-security stretch/updates main\n'\
-  > /etc/apt/sources.list && \
+  sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+  sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
   cat /etc/apt/sources.list && \
   /bin/bash -c "source /apt.sh && dk_prepare" && \
   apt-get clean && \
