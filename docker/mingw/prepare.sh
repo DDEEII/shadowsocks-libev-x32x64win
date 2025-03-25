@@ -38,7 +38,7 @@ PROJ_URL=https://github.com/${PROJ_SITE}/shadowsocks-libev.git
 ## libev for MinGW
 LIBEV_VER=mingw
 LIBEV_SRC=libev-${LIBEV_VER}
-LIBEV_URL=https://github.com/${PROJ_SITE}/libev/archive/${LIBEV_VER}.tar.gz
+LIBEV_URL=https://github.com/shadowsocks/libev/archive/${LIBEV_VER}.tar.gz
 
 # Public libraries
 
