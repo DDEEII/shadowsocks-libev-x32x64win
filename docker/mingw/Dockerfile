@@ -28,6 +28,7 @@ ADD docker/mingw/apt.sh /
 RUN \
   sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
   sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+  sed -i 's/stretch-updates/stretch/g' /etc/apt/sources.list && \
   cat /etc/apt/sources.list && \
   /bin/bash -c "source /apt.sh && dk_prepare" && \
   apt-get clean && \
