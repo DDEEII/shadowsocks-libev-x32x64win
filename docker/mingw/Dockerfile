@@ -28,7 +28,10 @@ ADD docker/mingw/apt.sh /
 RUN \
   sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
   sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+  sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list.d && \
+  sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list.d && \
   cat /etc/apt/sources.list && \
+  cat /etc/apt/sources.list.d && \
   /bin/bash -c "source /apt.sh && dk_prepare" && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /build
