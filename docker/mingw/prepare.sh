@@ -59,7 +59,7 @@ PCRE_URL=https://altushost-swe.dl.sourceforge.net/project/pcre/pcre/${PCRE_VER}/
 ## c-ares
 CARES_VER=1.16.0
 CARES_SRC=c-ares-${CARES_VER}
-CARES_URL=https://c-ares.haxx.se/download/${CARES_SRC}.tar.gz
+CARES_URL=https://github.com/c-ares/c-ares/releases/download/cares-1_16_0/${CARES_SRC}.tar.gz
 
 # Build steps
 
