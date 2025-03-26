@@ -45,8 +45,7 @@ LIBEV_URL=https://github.com/shadowsocks/libev/archive/${LIBEV_VER}.tar.gz
 ## mbedTLS
 MBEDTLS_VER=2.16.5
 MBEDTLS_SRC=mbedtls-${MBEDTLS_VER}
-MBEDTLS_URL=https://tls.mbed.org/download/mbedtls-${MBEDTLS_VER}-apache.tgz
-
+MBEDTLS_URL=https://github.com/Mbed-TLS/mbedtls/archive/refs/tags/mbedtls-${MBEDTLS_VER}.tar.gz
 ## Sodium
 SODIUM_VER=1.0.18
 SODIUM_SRC=libsodium-stable
