@@ -75,4 +75,5 @@ dk_download() {
         echo "Unpacking ${out}..."
         tar zxf ${out}
     done
+    ls -l /build/src
 }
