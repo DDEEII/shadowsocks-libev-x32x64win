@@ -75,5 +75,7 @@ dk_download() {
         echo "Unpacking ${out}..."
         tar zxf ${out}
     done
+    # fix MBEDTLS package
+    mv /build/src/mbedtls-mbedtls-2.16.5 /build/src/mbedtls-2.16.5
     ls -l /build/src
 }
