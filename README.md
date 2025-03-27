@@ -1,3 +1,5 @@
+### I'm fed up with the errors of the docker file,and I won't update it anymore.
+
 # shadowsocks-libev
 
 [![Build Status](https://travis-ci.com/shadowsocks/shadowsocks-libev.svg?branch=master)](https://travis-ci.com/shadowsocks/shadowsocks-libev) [![Snap Status](https://snapcraft.io/shadowsocks-libev/badge.svg)](https://snapcraft.io/shadowsocks-libev)
